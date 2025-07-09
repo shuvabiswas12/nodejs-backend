@@ -20,3 +20,11 @@ app.use(express.static("public"));
 
 // for accessing secure cookie form browser.
 app.use(cookieParser());
+
+// Routes import
+import userRouter from "./routes/user.routes.js";
+
+// Routes declaration
+app.get("/api/v1/users", userRouter);
+
+export { app };
