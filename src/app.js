@@ -11,6 +11,10 @@ app.use(
     })
 );
 
+// express.json() -> Built-in middleware in Express to parse incoming JSON payloads in req.body.
+// { limit: "16kb" } -> Sets the maximum size of incoming JSON request body to 16 kilobytes.
+// Prevents clients from sending large JSON payloads that can overwhelm your server (e.g., DoS attack).
+// Helps optimize memory usage.
 app.use(express.json({ limit: "16kb" }));
 
 // passing data through nesting object through url.
